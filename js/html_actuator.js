@@ -30,7 +30,6 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 };
 
 HTMLActuator.prototype.restart = function () {
-    if (ga) ga("send", "event", "game", "restart");
     this.clearMessage();
 };
 
@@ -119,8 +118,6 @@ HTMLActuator.prototype.updateScore = function (score, movs) {
 HTMLActuator.prototype.message = function (won) {
     var type = won ? "game-won" : "game-over";
     var message = won ? "You win!" : "Game over!"
-
-    // if (ga) ga("send", "event", "game", "end", type, this.score);
 
     this.messageContainer.classList.add(type);
     this.messageContainer.getElementsByTagName("p")[0].textContent = message;
