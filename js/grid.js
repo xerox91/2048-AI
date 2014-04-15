@@ -126,7 +126,7 @@ Grid.prototype.addStartTiles = function () {
 // Adds a tile in a random position
 Grid.prototype.addRandomTile = function () {
     if (this.cellsAvailable()) {
-        var value = Math.random() < 0.9 ? USUAL_TILE_VAL : BONUS_TILE_VAL;
+        var value = Math.random() < BONUS_PROB ? USUAL_TILE_VAL : BONUS_TILE_VAL;
         var tile = new Tile(this.randomAvailableCell(), value);
 
         this.insertTile(tile);

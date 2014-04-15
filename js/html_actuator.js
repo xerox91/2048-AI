@@ -3,7 +3,7 @@ function HTMLActuator() {
     this.scoreContainer = document.getElementById("points");
     this.movsContainer = document.getElementById("movements");
     this.messageContainer = document.getElementsByClassName("game-message")[0];
-    this.sharingContainer = document.getElementsByClassName("score-sharing")[0];
+//    this.sharingContainer = document.getElementsByClassName("score-sharing")[0];
 
     this.score = 0;
 }
@@ -125,9 +125,9 @@ HTMLActuator.prototype.message = function (won) {
     this.messageContainer.classList.add(type);
     this.messageContainer.getElementsByTagName("p")[0].textContent = message;
 
-    this.clearContainer(this.sharingContainer);
-    this.sharingContainer.appendChild(this.scoreTweetButton());
-    twttr.widgets.load();
+//    this.clearContainer(this.sharingContainer);
+//    this.sharingContainer.appendChild(this.scoreTweetButton());
+//    twttr.widgets.load();
 };
 
 HTMLActuator.prototype.clearMessage = function () {

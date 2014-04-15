@@ -70,13 +70,20 @@ h1.title {
     width: 100%;
     top: 10px;
     left: 0;
-    content: "Score";
     text-transform: uppercase;
     font-size: 13px;
     line-height: 13px;
     text-align: center;
     color: #eee4da;
 }
+
+#movements:after {
+    content: "Moves";
+}
+#points:after {
+    content: "Score"; 
+}
+
 .score-container .score-addition {
     position: absolute;
     right: 30px;

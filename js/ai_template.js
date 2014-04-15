@@ -13,6 +13,7 @@ function AI(grid) {
 
 // performs a search and returns the best move
 AI.prototype.getBest = function () {
+    // TODO here you should call whatever function you implement
     return this.sillyDecision();
 }
 
@@ -20,14 +21,17 @@ AI.prototype.getBest = function () {
 ///////////////////////////////////////////////
 
 
+
+// example function that makes a random decision
 AI.prototype.sillyDecision = function () {
-    return {
-        move: 0,        // a integer between 0 and 4
-        score: 10000,
-        positions: 0,
-        cutoffs: 0
-    };
+    mv = Math.floor(Math.random() * 4);  // a integer between 0 and 4
+    result = { move: mv };
+    
+    console.log(this.translate(result.move));   // prints the decision
+    return result;
 }
+
+// TODO here you should implement the algorithms for the agent
 
 
 
@@ -43,6 +47,5 @@ AI.prototype.translate = function (move) {
         3: 'left'
     }[move];
 }
-
 
 
