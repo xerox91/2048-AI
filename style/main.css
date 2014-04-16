@@ -2,8 +2,8 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: #faf8ef;
-    color: #776e65;
+    background: #eee;
+    color: #55576d;
     font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 18px;
 }
@@ -55,7 +55,7 @@ h1.title {
 .score-container {
     position: relative;
     float: right;
-    background: #bbada0;
+    background: #a0aabb;
     padding: 15px 25px;
     font-size: 25px;
     height: 25px;
@@ -64,6 +64,7 @@ h1.title {
     border-radius: 3px;
     color: white;
     margin-top: 8px;
+    margin-left: 10px;
 }
 .score-container:after {
     position: absolute;
@@ -74,20 +75,18 @@ h1.title {
     font-size: 13px;
     line-height: 13px;
     text-align: center;
-    color: #eee4da;
+    color: #55576d;
 }
-
 #movements:after {
     content: "Moves";
 }
 #points:after {
-    content: "Score"; 
+    content: "Score";
 }
-
 .score-container .score-addition {
     position: absolute;
     right: 30px;
-    color: red;
+    color: blue; /* XXX */
     font-size: 25px;
     line-height: 25px;
     font-weight: bold;
@@ -104,7 +103,7 @@ p {
     line-height: 1.65;
 }
 a {
-    color: #776e65;
+    color: #4e5271;
     font-weight: bold;
     text-decoration: underline;
     cursor: pointer;
@@ -114,7 +113,7 @@ strong.important {
 }
 hr {
     border: none;
-    border-bottom: 1px solid #d8d4d0;
+    border-bottom: 1px solid #cec4d6;
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -154,7 +153,7 @@ hr {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
-    background: #bbada0;
+    background: #a0aabb;
     border-radius: 6px;
     width: 500px;
     height: 500px;
@@ -190,11 +189,11 @@ hr {
 }
 .game-container .game-message a {
     display: inline-block;
-    background: #8f7a66;
+    background: #949ab4;
     border-radius: 3px;
     padding: 0 20px;
     text-decoration: none;
-    color: #f9f6f2;
+    color: #f7f7f7;
     height: 40px;
     line-height: 42px;
     margin-left: 9px;
@@ -206,7 +205,7 @@ hr {
 }
 .game-container .game-message.game-won {
     background: rgba(237, 194, 46, 0.5);
-    color: #f9f6f2;
+    color: #f7f7f7;
 }
 .game-container .game-message.game-won,
 .game-container .game-message.game-over {
@@ -329,7 +328,7 @@ hr {
 }
 .tile {
     border-radius: 3px;
-    background: #eee4da;
+    background: #f7f7f7;
     text-align: center;
     font-weight: bold;
     z-index: 10;
@@ -340,33 +339,33 @@ hr {
     -moz-transition-property: top, left;
 }
 .tile.tile-2 {
-    background: #eee4da;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    background: #f7f7f7;
+    box-shadow: 0 0 30px 10px rgba(155, 116, 243, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 .tile.tile-4 {
-    background: #ede0c8;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    background: #ddd;
+    box-shadow: 0 0 30px 10px rgba(155, 116, 243, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
 }
 .tile.tile-8 {
-    color: #f9f6f2;
-    background: #f2b179;
+    color: #fff;
+    background: #afb0b4;
 }
 .tile.tile-16 {
-    color: #f9f6f2;
-    background: #f59563;
+    color: #fff;
+    background: #858586;
 }
 .tile.tile-32 {
-    color: #f9f6f2;
-    background: #f67c5f;
+    color: #fff;
+    background: #676767;
 }
 .tile.tile-64 {
-    color: #f9f6f2;
-    background: #f65e3b;
+    color: #fff;
+    background: #4a4848;
 }
 .tile.tile-128 {
-    color: #f9f6f2;
-    background: #edcf72;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    color: #fff;
+    background: #2a2a3a;
+    box-shadow: 0 0 30px 10px rgba(155, 116, 243, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
     font-size: 45px;
 }
 @media screen and (max-width: 480px) {
@@ -375,9 +374,9 @@ hr {
     }
 }
 .tile.tile-256 {
-    color: #f9f6f2;
-    background: #edcc61;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    color: #fff;
+    background: #28202f;
+    box-shadow: 0 0 30px 10px rgba(155, 116, 243, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
     font-size: 45px;
 }
 @media screen and (max-width: 480px) {
@@ -386,9 +385,9 @@ hr {
     }
 }
 .tile.tile-512 {
-    color: #f9f6f2;
-    background: #edc850;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    color: #fff;
+    background: #382148;
+    box-shadow: 0 0 30px 10px rgba(155, 116, 243, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
     font-size: 45px;
 }
 @media screen and (max-width: 480px) {
@@ -397,9 +396,9 @@ hr {
     }
 }
 .tile.tile-1024 {
-    color: #f9f6f2;
-    background: #edc53f;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+    color: #fff;
+    background: #442564;
+    box-shadow: 0 0 30px 10px rgba(155, 116, 243, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
     font-size: 35px;
 }
 @media screen and (max-width: 480px) {
@@ -408,9 +407,9 @@ hr {
     }
 }
 .tile.tile-2048 {
-    color: #f9f6f2;
-    background: #edc22e;
-    box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    color: #fff;
+    background: #5e2c8e;
+    box-shadow: 0 0 30px 10px rgba(155, 116, 243, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 35px;
 }
 @media screen and (max-width: 480px) {
@@ -524,6 +523,8 @@ hr {
     display: inline-block;
     vertical-align: middle;
 }
+/***************************************************/
+/***************************************************/
 @media screen and (max-width: 480px) {
     html,
     body {
@@ -554,7 +555,7 @@ hr {
         -webkit-touch-callout: none;
         -webkit-user-select: none;
         -moz-user-select: none;
-        background: #bbada0;
+        background: #a0aabb;
         border-radius: 6px;
         width: 280px;
         height: 280px;
@@ -590,11 +591,11 @@ hr {
     }
     .game-container .game-message a {
         display: inline-block;
-        background: #8f7a66;
+        background: #949ab4;
         border-radius: 3px;
         padding: 0 20px;
         text-decoration: none;
-        color: #f9f6f2;
+        color: #f7f7f7;
         height: 40px;
         line-height: 42px;
         margin-left: 9px;
@@ -606,7 +607,7 @@ hr {
     }
     .game-container .game-message.game-won {
         background: rgba(237, 194, 46, 0.5);
-        color: #f9f6f2;
+        color: #f7f7f7;
     }
     .game-container .game-message.game-won,
     .game-container .game-message.game-over {
@@ -742,68 +743,4 @@ hr {
     .game-message .lower {
         margin-top: 30px !important;
     }
-}
-.btc-donate {
-    position: relative;
-    margin-left: 20px;
-    display: inline-block;
-    background: #8f7a66;
-    border-radius: 3px;
-    padding: 0 20px;
-    text-decoration: none;
-    color: #f9f6f2;
-    height: 40px;
-    line-height: 42px;
-    cursor: pointer;
-}
-.btc-donate img {
-    vertical-align: -4px;
-    margin-right: 8px;
-}
-.btc-donate a {
-    color: #f9f6f2;
-    text-decoration: none;
-    font-weight: normal;
-}
-.btc-donate .address {
-    cursor: auto;
-    position: absolute;
-    width: 340px;
-    right: 50%;
-    margin-right: -170px;
-    padding-bottom: 7px;
-    top: -30px;
-    opacity: 0;
-    pointer-events: none;
-    -webkit-transition: 400ms ease;
-    -moz-transition: 400ms ease;
-    -webkit-transition-property: top, opacity;
-    -moz-transition-property: top, opacity;
-}
-.btc-donate .address:after {
-    position: absolute;
-    border-top: 10px solid #bbada0;
-    border-right: 7px solid transparent;
-    border-left: 7px solid transparent;
-    content: "";
-    bottom: 0px;
-    left: 50%;
-    margin-left: -7px;
-}
-.btc-donate .address code {
-    background-color: #bbada0;
-    padding: 10px 15px;
-    width: 100%;
-    border-radius: 3px;
-    line-height: 1;
-    font-weight: normal;
-    font-size: 15px;
-    font-family: Consolas, "Liberation Mono", Courier, monospace;
-    text-align: center;
-}
-.btc-donate:hover .address,
-.btc-donate .address:hover .address {
-    opacity: 1;
-    top: -45px;
-    pointer-events: auto;
 }
