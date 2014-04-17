@@ -3,18 +3,22 @@
     padding: 0.5em;
     overflow: auto;
 }
-.ai-button,
-#feedback-container {
-    font-size: xx-large;
+.ai-button, #feedback-container {
+    font-size: x-large;
+}
+.ai-button {
+    background: #a0aabb;
+    border-radius: 3px;
+    color: #55576d;
 }
 #run-button-container {
     float: right;
 }
-#hint-button-container,
-#feedback-container {
+#hint-button-container, #feedback-container {
     float: left;
 }
 #feedback-container {
     margin-left: 1em;
+    margin-top: 3px;
     font-weight: bold;
 }
