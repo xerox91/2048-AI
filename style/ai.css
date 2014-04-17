@@ -3,10 +3,8 @@
     padding: 0.5em;
     overflow: auto;
 }
-.ai-button, #feedback-container {
-    font-size: x-large;
-}
 .ai-button {
+    font-size: x-large;
     background: #a0aabb;
     border-radius: 3px;
     color: #55576d;
@@ -18,6 +16,7 @@
     float: left;
 }
 #feedback-container {
+    font-size: x-large;
     margin-left: 1em;
     margin-top: 3px;
     font-weight: bold;
